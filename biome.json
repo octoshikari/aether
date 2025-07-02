@@ -24,10 +24,7 @@
     }
   },
   "files": {
-    "includes": [
-      "**",
-      "!**/package.json"
-    ]
+    "includes": ["**", "!**/node_modules", "!**/dist", "!**/storybook-static", "!**/package.json"]
   },
   "formatter": {
     "attributePosition": "multiline",
@@ -89,10 +86,7 @@
         "noConsole": {
           "level": "error",
           "options": {
-            "allow": [
-              "info",
-              "error"
-            ]
+            "allow": ["info", "error"]
           }
         },
         "noExplicitAny": "off",
