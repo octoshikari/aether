@@ -1,0 +1,60 @@
+name: Storybook PR Check
+
+on:
+  pull_request:
+    paths:
+      - 'packages/react/**'
+      - 'apps/storybook/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+
+jobs:
+  build-check:
+    name: Build and Check Storybook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint React package
+        run: pnpm --filter @aether/react lint
+        continue-on-error: true
+
+      - name: Build React package
+        run: pnpm --filter @aether/react build
+
+      - name: Build Storybook
+        run: pnpm --filter @aether/storybook build
+
+      - name: Archive Storybook build
+        uses: actions/upload-artifact@v3
+        with:
+          name: storybook-build
+          path: apps/storybook/storybook-static
+          retention-days: 7
+
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ Storybook build successful! You can download the build artifact from the Actions tab.'
+            })

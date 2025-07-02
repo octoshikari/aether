@@ -1,0 +1,29 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# Aether UI Kit
+
+Aether - это UI Kit для FHIR, основанный на Mantine UI.
+
+## Компоненты
+
+UI-библиотека включает в себя компоненты, специально адаптированные для работы с FHIR-ресурсами:
+
+- **Button** - кнопка с FHIR-специфичными вариантами
+- **TextInput** - текстовое поле с FHIR-специфичными стилями
+
+## Использование
+
+```jsx
+import { AetherUiProvider, Button, TextInput } from '@aether/react';
+
+function App() {
+  return (
+    <AetherUiProvider>
+      <Button variant="primary">Сохранить</Button>
+      <TextInput label="Имя пациента" placeholder="Введите имя" />
+    </AetherUiProvider>
+  );
+}
+```
