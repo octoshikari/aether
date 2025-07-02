@@ -13,7 +13,7 @@ export const colors = {
     '#003a8c',
     '#002766',
   ],
-  
+
   // Статусы FHIR
   green: [
     '#e6f7ee',
@@ -27,7 +27,7 @@ export const colors = {
     '#135228',
     '#0a3d1e',
   ],
-  
+
   red: [
     '#ffebee',
     '#ffcdd2',
@@ -40,7 +40,7 @@ export const colors = {
     '#b71c1c',
     '#8e1515',
   ],
-  
+
   yellow: [
     '#fffde7',
     '#fff9c4',
@@ -53,7 +53,7 @@ export const colors = {
     '#f57f17',
     '#e65100',
   ],
-  
+
   gray: [
     '#fafafa',
     '#f5f5f5',

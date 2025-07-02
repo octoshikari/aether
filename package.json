@@ -6,7 +6,7 @@
     "build": "pnpm -r build",
     "dev": "pnpm -r dev",
     "lint": "biome check .",
-    "format": "biome format --write .",
+    "lint:fix": "pnpm -r lint:fix",
     "test": "vitest",
     "storybook": "pnpm --filter @aether/storybook dev",
     "build:storybook": "pnpm --filter @aether/storybook build"

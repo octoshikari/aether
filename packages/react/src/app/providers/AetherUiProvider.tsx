@@ -1,6 +1,6 @@
-import type { FC, PropsWithChildren } from 'react';
-import { MantineProvider } from '@mantine/core';
 import type { MantineProviderProps } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
+import type { FC, PropsWithChildren } from 'react';
 import { aetherTheme } from '../../shared/config';
 
 /**

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { AetherUiProvider } from '../AetherUiProvider';
 import { Button } from '../../../components/Button/Button';
 import { TextInput } from '../../../components/TextInput/TextInput';
+import { AetherUiProvider } from '../AetherUiProvider';
 
 const meta = {
   title: 'App/Providers/AetherUiProvider',

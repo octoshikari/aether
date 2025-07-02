@@ -39,8 +39,8 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
 
     return (
       <MantineTextInput
-        ref={ref}
         error={errorMessage}
+        ref={ref}
         styles={(theme) => ({
           input: {
             borderColor: inputColor ? theme.colors[inputColor][6] : undefined,

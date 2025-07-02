@@ -38,10 +38,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <MantineButton
-        ref={ref}
-        variant={variantMap[variant]}
         color={colorMap[variant]}
         radius="md"
+        ref={ref}
+        variant={variantMap[variant]}
         {...props}
       >
         {children}

@@ -1,5 +1,5 @@
-import type { Preview } from '@storybook/react';
 import { AetherUiProvider } from '@aether/react';
+import type { Preview } from '@storybook/react';
 import '@mantine/core/styles.css';
 // biome-ignore lint/correctness/noUnusedImports: need
 import React from 'react';

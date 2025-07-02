@@ -13,6 +13,7 @@
     "react-dom": "^19.0.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "catalog:",
     "@storybook/addon-docs": "^9.0.15",
     "@storybook/addon-links": "^9.0.15",
     "@storybook/addon-onboarding": "^9.0.15",
